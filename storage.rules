@@ -1,0 +1,24 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    
+    // Helper: Check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Helper: Check if the user has an admin role in their auth token custom claims
+    function isAdmin() {
+      return isAuthenticated() && request.auth.token.role == "admin";
+    }
+
+    // Rules for static assets (products, blogs, categories, settings)
+    match /{allPaths=**} {
+      // Anyone can read images/assets
+      allow read: if true;
+      // Only authenticated admin users can write (create, update, delete) files
+      allow write: if isAdmin();
+    }
+  }
+}

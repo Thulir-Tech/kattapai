@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* 1. Custom class dark mode selector for Tailwind CSS v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #09090b;
+  --primary-font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --mono-font: 'JetBrains Mono', monospace;
+}
+
+.dark {
+  --background: #030303;
+  --foreground: #f4f4f5;
+}
+
+/* 3. Configure Tailwind CSS v4 Custom Theme Variables */
+@theme {
+  --font-sans: var(--primary-font);
+  --font-mono: var(--mono-font);
+  
+  --color-violet-400: var(--primary-400);
+  --color-violet-500: var(--primary-500);
+  --color-violet-600: var(--primary-600);
+  
+  /* Slide-Left and Fade-in custom timing values */
+  --animate-fadeIn: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-slideLeft: slideLeft 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.975) translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  @keyframes slideLeft {
+    from {
+      transform: translateX(100%);
+      opacity: 0.8;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
+/* 4. Global Elements Override */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--primary-font);
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 5. Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.2);
+  border-radius: 9999px;
+  transition: background 0.2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.45);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.15);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.35);
+}
+
+/* 6. High-end Glassmorphic Panels & Glow utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(228, 228, 231, 0.6);
+}
+
+.dark .glass-panel {
+  background: rgba(9, 9, 11, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(39, 39, 42, 0.4);
+}
+
+.neon-glow-violet {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.12);
+}
+
+.dark .neon-glow-violet {
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.08);
+}
