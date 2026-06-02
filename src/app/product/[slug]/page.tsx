@@ -133,8 +133,8 @@ export default async function ProductDetailPage(props: ProductDetailPageProps) {
       />
       
       {/* Breadcrumbs Navigation */}
-      <nav className="flex items-center gap-2 text-xs font-semibold text-zinc-400 uppercase tracking-wider shrink-0">
-        <Link href="/" className="hover:text-zinc-600 transition-colors">Home</Link>
+      <nav className="flex flex-wrap items-center gap-y-2 gap-x-2 text-xs font-semibold text-zinc-400 uppercase tracking-wider">
+        <Link href="/" className="hover:text-zinc-600 transition-colors shrink-0">Home</Link>
         <ChevronRight className="w-3.5 h-3.5" />
         <Link href="/products" className="hover:text-zinc-600 transition-colors">Shop</Link>
         <ChevronRight className="w-3.5 h-3.5" />
@@ -152,7 +152,7 @@ export default async function ProductDetailPage(props: ProductDetailPageProps) {
         </div>
 
         {/* Right Column: CTA & Details Dashboard (Span 5) */}
-        <div className="lg:col-span-5 space-y-6 bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-850 p-6 sm:p-8 rounded-[32px] shadow-sm">
+        <div className="lg:col-span-5 space-y-6 bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800/80 p-6 sm:p-8 rounded-[32px] shadow-sm">
           
           <div className="space-y-3">
             <span className="inline-flex px-3 py-1 rounded-full text-[9px] font-extrabold uppercase tracking-widest text-violet-600 dark:text-violet-400 bg-violet-500/5 border border-violet-500/10">
@@ -204,7 +204,7 @@ export default async function ProductDetailPage(props: ProductDetailPageProps) {
       </div>
 
       {/* Overview Block */}
-      <section className="bg-white dark:bg-zinc-900/35 border border-zinc-200 dark:border-zinc-850 p-6 sm:p-8 rounded-[32px] space-y-4">
+      <section className="bg-white dark:bg-zinc-900/35 border border-zinc-200 dark:border-zinc-800/80 p-6 sm:p-8 rounded-[32px] space-y-4">
         <h3 className="font-extrabold text-lg text-zinc-800 dark:text-zinc-100">Product overview & Analysis</h3>
         <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed font-semibold whitespace-pre-line">
           {product.description}
@@ -248,17 +248,17 @@ export default async function ProductDetailPage(props: ProductDetailPageProps) {
 
       {/* Technical Specifications Map Grid */}
       {specs.length > 0 && (
-        <section className="bg-white dark:bg-zinc-900/35 border border-zinc-200 dark:border-zinc-850 p-6 sm:p-8 rounded-[32px] space-y-6">
+        <section className="bg-white dark:bg-zinc-900/35 border border-zinc-200 dark:border-zinc-800/80 p-6 sm:p-8 rounded-[32px] space-y-6">
           <div className="flex items-center gap-2">
             <ListChecks className="w-5 h-5 text-violet-500" />
             <h3 className="font-extrabold text-lg text-zinc-800 dark:text-zinc-100">Technical Specifications</h3>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-4 text-xs font-semibold">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-2 text-xs font-semibold">
             {specs.map(([key, val]) => (
-              <div key={key} className="flex justify-between items-center py-2.5 border-b border-zinc-100 dark:border-zinc-800/40">
-                <span className="text-zinc-400 uppercase tracking-wider">{key}</span>
-                <span className="text-zinc-700 dark:text-zinc-300 font-bold">{val}</span>
+              <div key={key} className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1.5 py-3 border-b border-zinc-100 dark:border-zinc-800/40">
+                <span className="text-zinc-400 dark:text-zinc-500 uppercase tracking-wider text-[10px] sm:text-xs shrink-0">{key}</span>
+                <span className="text-zinc-700 dark:text-zinc-300 font-bold text-left sm:text-right break-words max-w-full sm:max-w-[65%]">{val}</span>
               </div>
             ))}
           </div>
@@ -278,9 +278,9 @@ export default async function ProductDetailPage(props: ProductDetailPageProps) {
               key={idx} 
               className="group border border-zinc-200 dark:border-zinc-800/80 rounded-2xl p-5 bg-white dark:bg-zinc-900/40 [&_summary::-webkit-details-marker]:hidden cursor-pointer"
             >
-              <summary className="flex justify-between items-center font-bold text-sm text-zinc-800 dark:text-zinc-200 select-none">
+              <summary className="flex justify-between items-start gap-4 font-bold text-sm text-zinc-800 dark:text-zinc-200 select-none">
                 {faq.q}
-                <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180 text-zinc-400" />
+                <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180 text-zinc-400 shrink-0 mt-0.5" />
               </summary>
               <p className="mt-3.5 text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed font-semibold">
                 {faq.a}

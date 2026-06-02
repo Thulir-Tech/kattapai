@@ -138,7 +138,7 @@ export default async function ProductsCataloguePage(props: ProductsPageProps) {
           </p>
         </div>
         
-        <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest bg-zinc-100 dark:bg-zinc-900 border border-zinc-200/50 dark:border-zinc-850 px-3 py-1.5 rounded-full shrink-0">
+        <span className="text-xs font-bold text-zinc-400 uppercase tracking-widest bg-zinc-100 dark:bg-zinc-900 border border-zinc-200/50 dark:border-zinc-800/80 px-3 py-1.5 rounded-full shrink-0">
           {totalItems} items matching
         </span>
       </div>
@@ -150,7 +150,7 @@ export default async function ProductsCataloguePage(props: ProductsPageProps) {
         <aside className="space-y-6 lg:sticky lg:top-24">
           
           {/* Quick Search */}
-          <div className="bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-850 p-6 rounded-3xl space-y-3">
+          <div className="bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800/80 p-6 rounded-3xl space-y-3">
             <h3 className="text-xs font-black uppercase tracking-wider text-zinc-400 flex items-center gap-1.5">
               <Search className="w-3.5 h-3.5 text-violet-500" />
               Keyword Filter
@@ -182,7 +182,7 @@ export default async function ProductsCataloguePage(props: ProductsPageProps) {
           </div>
 
           {/* Sort Controls */}
-          <div className="bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-850 p-6 rounded-3xl space-y-4">
+          <div className="bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800/80 p-6 rounded-3xl space-y-4">
             <h3 className="text-xs font-black uppercase tracking-wider text-zinc-400 flex items-center gap-1.5">
               <SlidersHorizontal className="w-3.5 h-3.5 text-violet-500" />
               Sort Strategy
@@ -216,7 +216,7 @@ export default async function ProductsCataloguePage(props: ProductsPageProps) {
           </div>
 
           {/* Categories Sidebar */}
-          <div className="bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-850 p-6 rounded-3xl space-y-4">
+          <div className="bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800/80 p-6 rounded-3xl space-y-4">
             <h3 className="text-xs font-black uppercase tracking-wider text-zinc-400 flex items-center gap-1.5">
               <FolderTree className="w-3.5 h-3.5 text-violet-500" />
               Categories

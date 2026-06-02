@@ -198,8 +198,6 @@ export default async function BlogDetailPage(props: BlogDetailPageProps) {
             <Clock className="w-4 h-4 text-violet-500" />
             <span>{computedReadTime} min read duration</span>
           </div>
-          <span className="hidden sm:inline text-zinc-300">|</span>
-          <span>By {blog.authorId.split('@')[0]}</span>
         </div>
       </header>
 
@@ -220,7 +218,7 @@ export default async function BlogDetailPage(props: BlogDetailPageProps) {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         
         {/* Content Block (Span 9) */}
-        <main className="lg:col-span-9 bg-white dark:bg-zinc-900/35 border border-zinc-200 dark:border-zinc-850 p-6 sm:p-10 rounded-[32px] shadow-sm">
+        <main className="lg:col-span-9 bg-white dark:bg-zinc-900/35 border border-zinc-200 dark:border-zinc-800/80 p-6 sm:p-10 rounded-[32px] shadow-sm">
           {/* Safely inject the rich text editor output using custom visual guidelines */}
           <div 
             className="prose prose-zinc dark:prose-invert max-w-none text-zinc-700 dark:text-zinc-300 leading-relaxed text-sm font-medium space-y-6
@@ -257,7 +255,7 @@ export default async function BlogDetailPage(props: BlogDetailPageProps) {
         {/* Social sharing Sidebar Widgets (Span 3) */}
         <aside className="lg:col-span-3 space-y-6 lg:sticky lg:top-24">
           
-          <div className="bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-850 p-6 rounded-3xl space-y-4">
+          <div className="bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800/80 p-6 rounded-3xl space-y-4">
             <h4 className="text-xs font-black uppercase tracking-wider text-zinc-400 flex items-center gap-1.5">
               <Share2 className="w-4 h-4 text-violet-500" />
               Share Guide
@@ -353,8 +351,7 @@ export default async function BlogDetailPage(props: BlogDetailPageProps) {
                     </h4>
                   </div>
 
-                  <div className="flex items-center justify-between pt-3 border-t border-zinc-100 dark:border-zinc-800/40 mt-3">
-                    <span className="text-[9px] text-zinc-400 font-semibold uppercase">By {b.authorId.split('@')[0]}</span>
+                  <div className="flex items-center justify-end pt-3 border-t border-zinc-100 dark:border-zinc-800/40 mt-3">
                     <Link 
                       href={`/blog/${b.slug}`}
                       className="text-xs font-bold text-violet-500 hover:text-violet-600 flex items-center gap-0.5 group/link"

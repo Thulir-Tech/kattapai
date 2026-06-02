@@ -301,8 +301,7 @@ export default async function HomePage() {
                       </p>
                     </div>
 
-                    <div className="flex items-center justify-between pt-4 border-t border-zinc-100 dark:border-zinc-800/40">
-                      <span className="text-[10px] text-zinc-400 uppercase font-semibold">Author: {blog.authorId.split('@')[0]}</span>
+                    <div className="flex items-center justify-end pt-4 border-t border-zinc-100 dark:border-zinc-800/40 w-full">
                       <Link 
                         href={`/blog/${blog.slug}`} 
                         className="text-xs font-bold text-violet-500 hover:text-violet-600 dark:text-violet-400 flex items-center gap-1"

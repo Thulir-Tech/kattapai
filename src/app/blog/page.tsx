@@ -260,13 +260,8 @@ export default async function BlogListingPage(props: BlogPageProps) {
                     </p>
                   </div>
 
-                  {/* Authorship & CTA footer */}
-                  <div className="flex items-center justify-between pt-4 border-t border-zinc-150 dark:border-zinc-805">
-                    <div className="space-y-0.5">
-                      <span className="text-[9px] font-black text-zinc-450 uppercase tracking-widest block">Author</span>
-                      <span className="text-[10px] font-extrabold text-zinc-700 dark:text-zinc-350">{blog.authorId.split('@')[0]}</span>
-                    </div>
-
+                  {/* Read More CTA footer */}
+                  <div className="flex items-center justify-end pt-4 border-t border-zinc-150 dark:border-zinc-805">
                     <Link 
                       href={`/blog/${blog.slug}`} 
                       className="inline-flex items-center gap-1.5 text-xs font-bold text-violet-600 dark:text-violet-400 group/link"
@@ -294,7 +289,7 @@ export default async function BlogListingPage(props: BlogPageProps) {
                 {currentPage > 1 ? (
                   <Link 
                     href={getFilterUrl({ page: currentPage - 1 })}
-                    className="flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-850 rounded-xl text-xs font-bold text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200 cursor-pointer"
+                    className="flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800/80 rounded-xl text-xs font-bold text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200 cursor-pointer"
                   >
                     <ArrowLeft className="w-3.5 h-3.5" />
                     Previous
@@ -313,7 +308,7 @@ export default async function BlogListingPage(props: BlogPageProps) {
                 {currentPage < totalPages ? (
                   <Link 
                     href={getFilterUrl({ page: currentPage + 1 })}
-                    className="flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-850 rounded-xl text-xs font-bold text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200 cursor-pointer"
+                    className="flex items-center gap-1.5 px-4 py-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800/80 rounded-xl text-xs font-bold text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200 cursor-pointer"
                   >
                     Next
                     <ArrowRight className="w-3.5 h-3.5" />
