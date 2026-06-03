@@ -93,7 +93,7 @@ export default async function TermsOfServicePage() {
               2. Amazon Affiliate Curation Disclaimer
             </h2>
             <p>
-              {siteName} operates strictly as an independent product review and tech curation registry. We compile detailed specifications, expert pros and cons, buying guides, and user testimonials.
+              {siteName} operates strictly as an independent product review and curation registry. We compile detailed specifications, expert pros and cons, buying guides, and user testimonials.
             </p>
             <div className="bg-amber-500/5 border border-amber-500/10 rounded-2xl p-5 space-y-3">
               <h3 className="font-bold text-sm text-amber-650 dark:text-amber-400 flex items-center gap-1.5">
@@ -147,7 +147,7 @@ export default async function TermsOfServicePage() {
               5. Limitation of Liability
             </h2>
             <p>
-              In no event shall {siteName}, its founders, directors, employees, or tech curation experts be liable for any damages (including, without limitation, direct, indirect, incidental, punitive, or consequential damages) arising from:
+              In no event shall {siteName}, its founders, directors, employees, or product experts be liable for any damages (including, without limitation, direct, indirect, incidental, punitive, or consequential damages) arising from:
             </p>
             <ul className="list-disc list-inside space-y-1 pl-2">
               <li>Inaccuracies in product reviews, specs lists, or comparison charts.</li>

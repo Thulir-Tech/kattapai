@@ -92,7 +92,7 @@ export default async function CookiePolicyPage() {
               2. How We Use Cookies
             </h2>
             <p>
-              At <strong>{siteName}</strong>, we use cookies to deliver a responsive, visually consistent, and robust layout. Cookies help us authenticate administrative dashboard entries, retain dark/light preferences, keep track of newsletter registrations, and gather anonymous analytics about which tech products are most frequently evaluated.
+              At <strong>{siteName}</strong>, we use cookies to deliver a responsive, visually consistent, and robust layout. Cookies help us authenticate administrative dashboard entries, retain dark/light preferences, keep track of newsletter registrations, and gather anonymous analytics about which products are most frequently evaluated.
             </p>
           </div>
 
@@ -124,7 +124,7 @@ export default async function CookiePolicyPage() {
                 <Eye className="w-5 h-5 text-violet-500 shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-extrabold text-sm text-zinc-900 dark:text-zinc-50">Analytics & Performance Tracking</h4>
-                  <p className="text-xs text-zinc-400 mt-1">Compile aggregate, anonymous records of visitor volume, average session times, referral sources, and button click parameters. We use these metrics to identify popular tech reviews.</p>
+                  <p className="text-xs text-zinc-400 mt-1">Compile aggregate, anonymous records of visitor volume, average session times, referral sources, and button click parameters. We use these metrics to identify popular reviews and trending catalog recommendations.</p>
                 </div>
               </div>
             </div>

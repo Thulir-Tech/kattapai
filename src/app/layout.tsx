@@ -32,7 +32,7 @@ export async function generateMetadata(): Promise<Metadata> {
     };
   } catch (e) {
     return {
-      title: "Katta Pai | Curated Tech Products & Amazon Top Deals",
+      title: "EasyKart | Curated Products & Amazon Top Deals",
       description: "Discover expert  reviews, buying guides, and top amazon affiliate deals.",
       icons: {
         icon: "/favicon.ico",
@@ -50,8 +50,8 @@ export default async function RootLayout({
   let categories: Category[] = [];
   let settings: SiteSettings = {
     siteName: "EasyKart",
-    siteTitle: "EasyKart | Tech Products",
-    siteDescription: "Discover expert tech reviews and buying guides.",
+    siteTitle: "EasyKart | Premium Curated Products",
+    siteDescription: "Discover expert reviews, buying guides, and top Amazon recommendations.",
     contactEmail: "admin@easykart.com",
     amazonAffiliateTag: "easykart26-20",
     logoURL: "",

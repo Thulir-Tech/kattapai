@@ -131,7 +131,7 @@ export default async function HomePage() {
                 <FolderTree className="w-5 h-5 text-violet-500" />
                 Popular Categories
               </h2>
-              <p className="text-xs text-zinc-400">Filter catalogue entries instantly by technical verticals.</p>
+              <p className="text-xs text-zinc-400">Filter catalogue entries instantly by curated categories.</p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -255,7 +255,7 @@ export default async function HomePage() {
                   <BookOpen className="w-5 h-5 text-violet-500" />
                   Latest Articles & Buying Guides
                 </h2>
-                <p className="text-xs text-zinc-400">Read our expert recommendations on buying keyboards, mice, and other modern workspace tech.</p>
+                <p className="text-xs text-zinc-400">Read our expert recommendations, tips, and setup guides across multiple product categories.</p>
               </div>
               <Link 
                 href="/blog" 

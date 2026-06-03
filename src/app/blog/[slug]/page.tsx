@@ -54,7 +54,7 @@ export async function generateMetadata(props: BlogDetailPageProps): Promise<Meta
       }
     };
   } catch (e) {
-    return { title: 'Tech Blog Article | EasyKart' };
+    return { title: 'Blog Article | EasyKart' };
   }
 }
 
@@ -323,7 +323,7 @@ export default async function BlogDetailPage(props: BlogDetailPageProps) {
         <section className="space-y-6 pt-10 border-t border-zinc-200/60 dark:border-zinc-800/80">
           <h3 className="font-extrabold text-lg text-zinc-800 dark:text-zinc-100 flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-violet-500 animate-pulse" />
-            Related tech recommendations
+            Related recommendations
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

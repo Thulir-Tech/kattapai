@@ -22,8 +22,8 @@ export const SettingsService = {
       // Default website settings fallback
       const defaultSettings: SiteSettings = {
         siteName: 'EasyKart',
-        siteTitle: 'EasyKart | Curated Tech Products & Top Amazon Recommendations',
-        siteDescription: 'Discover expert reviews, buying guides, and the absolute best affiliate deals on laptops, keyboards, and modern gaming tech.',
+        siteTitle: 'EasyKart | Hand-Picked Products & Top Amazon Recommendations',
+        siteDescription: 'Discover expert reviews, detailed buying guides, and the absolute best affiliate deals across home, fashion, electronics, and lifestyle gear.',
         contactEmail: 'admin@easykart.com',
         amazonAffiliateTag: 'easykart26-20',
         socialLinks: {

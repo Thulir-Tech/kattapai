@@ -360,7 +360,7 @@ export default function PublicLayoutShell({ children, categories, settings: init
           {/* Newsletter Box */}
           <div className="space-y-4">
             <h4 className="font-extrabold text-xs tracking-wider uppercase text-zinc-400 text-zinc-500">Subscribe newsletter</h4>
-            <p className="text-xs text-zinc-500 leading-relaxed">Get curated technical recommendations, tech gear buying guides, and exclusive discount deals direct to inbox.</p>
+            <p className="text-xs text-zinc-500 leading-relaxed">Get curated product reviews, hand-picked buying guides, and exclusive discount deals direct to your inbox.</p>
             
             {isSubscribed ? (
               <div className="flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 p-3 rounded-2xl text-xs font-bold animate-pulse">

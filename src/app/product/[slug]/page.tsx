@@ -96,6 +96,12 @@ export default async function ProductDetailPage(props: ProductDetailPageProps) {
   // Structured specifications key-value map fallbacks
   const specs = Object.entries(product.specifications || {});
 
+  // Clean and filter active pros and cons arrays
+  const pros = (product.pros || []).filter(Boolean);
+  const cons = (product.cons || []).filter(Boolean);
+  const hasPros = pros.length > 0;
+  const hasCons = cons.length > 0;
+
   // Pre-configured FAQ items
   const faqs = [
     {
@@ -212,39 +218,45 @@ export default async function ProductDetailPage(props: ProductDetailPageProps) {
       </section>
 
       {/* Pros & Cons Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Pros */}
-        <div className="bg-emerald-500/5 border border-emerald-500/10 p-6 sm:p-8 rounded-[32px] space-y-4">
-          <h3 className="font-extrabold text-base text-emerald-700 dark:text-emerald-400 flex items-center gap-2">
-            <Check className="w-5 h-5 stroke-[2.5]" />
-            Pros & Value Highs
-          </h3>
-          <ul className="space-y-3 text-xs font-bold text-emerald-800/90 dark:text-emerald-400/90">
-            {(product.pros || ['Highly rated by customer reviews', 'Excellent build value']).map((pro, idx) => (
-              <li key={idx} className="flex gap-2.5 items-start">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-1.5" />
-                <span className="leading-relaxed">{pro}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+      {(hasPros || hasCons) && (
+        <div className={`grid grid-cols-1 ${hasPros && hasCons ? 'md:grid-cols-2' : ''} gap-8`}>
+          {/* Pros */}
+          {hasPros && (
+            <div className="bg-emerald-500/5 border border-emerald-500/10 p-6 sm:p-8 rounded-[32px] space-y-4">
+              <h3 className="font-extrabold text-base text-emerald-700 dark:text-emerald-400 flex items-center gap-2">
+                <Check className="w-5 h-5 stroke-[2.5]" />
+                Pros & Value Highs
+              </h3>
+              <ul className="space-y-3 text-xs font-bold text-emerald-800/90 dark:text-emerald-400/90">
+                {pros.map((pro, idx) => (
+                  <li key={idx} className="flex gap-2.5 items-start">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-1.5" />
+                    <span className="leading-relaxed">{pro}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
-        {/* Cons */}
-        <div className="bg-red-500/5 border border-red-500/10 p-6 sm:p-8 rounded-[32px] space-y-4">
-          <h3 className="font-extrabold text-base text-red-700 dark:text-red-400 flex items-center gap-2">
-            <X className="w-5 h-5 stroke-[2.5]" />
-            Cons & Considerations
-          </h3>
-          <ul className="space-y-3 text-xs font-bold text-red-800/90 dark:text-red-400/90">
-            {(product.cons || ['High retail demand might limit supply']).map((con, idx) => (
-              <li key={idx} className="flex gap-2.5 items-start">
-                <span className="w-1.5 h-1.5 rounded-full bg-red-500 shrink-0 mt-1.5" />
-                <span className="leading-relaxed">{con}</span>
-              </li>
-            ))}
-          </ul>
+          {/* Cons */}
+          {hasCons && (
+            <div className="bg-red-500/5 border border-red-500/10 p-6 sm:p-8 rounded-[32px] space-y-4">
+              <h3 className="font-extrabold text-base text-red-700 dark:text-red-400 flex items-center gap-2">
+                <X className="w-5 h-5 stroke-[2.5]" />
+                Cons & Considerations
+              </h3>
+              <ul className="space-y-3 text-xs font-bold text-red-800/90 dark:text-red-400/90">
+                {cons.map((con, idx) => (
+                  <li key={idx} className="flex gap-2.5 items-start">
+                    <span className="w-1.5 h-1.5 rounded-full bg-red-500 shrink-0 mt-1.5" />
+                    <span className="leading-relaxed">{con}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
-      </div>
+      )}
 
       {/* Technical Specifications Map Grid */}
       {specs.length > 0 && (
@@ -293,7 +305,7 @@ export default async function ProductDetailPage(props: ProductDetailPageProps) {
       {/* Related Products Section (NO PRICES!) */}
       {relatedProducts.length > 0 && (
         <section className="space-y-6">
-          <h3 className="font-extrabold text-lg text-zinc-800 dark:text-zinc-100">Related tech recommendations</h3>
+          <h3 className="font-extrabold text-lg text-zinc-800 dark:text-zinc-100">Related recommendations</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {relatedProducts.map((p) => (

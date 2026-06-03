@@ -113,10 +113,10 @@ export default async function BlogListingPage(props: BlogPageProps) {
             EasyKart Knowledge Hub
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-white via-zinc-100 to-zinc-400 bg-clip-text text-transparent leading-tight">
-            Tech buying guides & advice
+            Buying guides & expert advice
           </h1>
           <p className="text-sm sm:text-base text-zinc-400 max-w-2xl mx-auto leading-relaxed">
-            In-depth breakdowns, expert setup guides, and critical reviews of top-performing modern workspace gear. Written by tech minimalists.
+            In-depth breakdowns, expert setup guides, and critical reviews of top-performing items across every aspect of life. Written by product experts.
           </p>
         </div>
       </section>
